@@ -1,0 +1,414 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header{
+    height: auto;
+    background-color: black;
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    /*  */
+    z-index: 50;
+}
+#header li{
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+#header li:nth-child(2){
+    display: none;
+}
+#header .subnav{
+    display: none;
+    position: absolute;
+    background-color:white;
+    width: 160px;
+    box-shadow: 0 0 10px #00000035;
+    z-index: 50;
+}
+#header .subnav li{
+    display: block;
+}
+#header .subnav a{
+    display: block;
+    color: black;
+    padding: 0 16px;
+}
+#header li:hover >a{
+    background-color:#ccc;
+    color:black;
+}
+#header li:hover .subnav{
+    display: block;
+}
+#header li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    line-height: 46px;
+    padding:0 24px;
+}
+#header #search:hover>a {
+    background-color:#f44336;
+    color: white;
+}
+#header #search{
+    float: right;
+}
+#header #search i{
+    transform: translateY(2px);
+}
+.fa-sort-down{
+    transform:translateY(-2px) ;
+}
+#slider{
+    margin-top: 46px;
+    width: 100%;
+}
+#slider .image-slider{
+    display: none;
+    position: relative;
+    z-index: -1;
+}
+#slider .image-slider img{
+    width: 100%;
+}
+.image-slider .content{
+    position: absolute;
+    color: white;
+    z-index: 1;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-slider .content p{
+    font-weight: bold;text-align: center;
+}
+.image-slider h3,p{
+    margin: 10px 0;
+}
+#slider .image-slider:nth-child(3){
+    display: block;
+} 
+#content {
+    display: block;
+}
+#content >div{
+    padding: 64px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#content>img{
+    width: 100%;
+}
+#content div >.content{
+    max-width:800px;
+    text-align: center;
+    width: 100%;
+}
+.theband h2{
+    font-weight: 400;
+    font-size: 30px;
+    margin: 12px 0;
+}
+.theband i{
+    color: gray;
+}
+.theband .theband-footer{
+    display: flex;
+    margin: 30px 0;
+    flex-direction: row;
+}
+
+.theband-footer .member{
+    flex: 1;
+}
+.theband-footer .member img{
+    width: 60%;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+.tourdates{
+    background-color: black;
+}
+.tourdates h2{
+    color:white
+}
+.tourdates i{
+    color: gray;
+    margin:25px 0;
+    display: block;
+}
+.tourdates .time-box{
+    background-color: white;
+    height:42px ;
+    border:  1px solid #00000030;
+    margin-bottom: -1px;
+    width: 100%;
+    text-align: left;
+    position: relative;
+
+}
+.time-box span{
+    display: inline-block;
+    padding:10px;
+    color: gray;
+}
+.red{
+    background-color: #f44336;
+    color: white !important;
+    padding: 2px 8px !important;
+}
+.h{
+    background-color: black;
+    color: white !important;
+    border-radius: 100%;
+    width: 30px;height: 30px;
+    line-height: 14px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right:25px;
+}
+.time{
+    color: gray;
+}
+.buy{
+   margin:0 16px 16px;
+   background-color: black;
+   border:none;
+   color:white;
+   padding: 10px 15px;
+   font-size: 16px;
+   font-weight: 400;
+   cursor: pointer;
+}
+button:hover{
+    background-color: #cccccc;
+    color: black;
+}
+.tourdates .tourlist{
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tourlist .item{
+   text-align: left;
+   margin:16px 0;
+   width: 32%;
+}
+.tourlist .item >div{
+   background-color: white;
+
+}
+/* .tourlist .item+.item{
+    margin-left: 16px;
+} */
+.tourlist .item img{
+    width: 100%;
+    margin-bottom: -4px;
+}
+.tourlist .item img:hover{
+    opacity: 0.6;
+}
+.tourlist .item span,.tourlist .item p{
+    display: block;
+    text-align: left;
+    padding: 16px 16px 0;
+}
+.contact h2{
+    font-weight: 400;
+}
+.contact .send-box{
+    text-align: left !important;
+    display: flex;
+}
+
+.send-box .infor,.send-box .input-box{
+    flex:1;
+}
+.input-box> div{
+    display: flex;
+}
+.input-box >div input{
+    width: 50%;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+}
+.infor div{
+    margin:14px
+}
+.infor i{
+    display: inline !important;
+    color: black !important;
+    padding:0 10px;
+}
+.send-box input{
+    display: block;
+    height: 40px;
+    margin: 5px 8px;
+    border:1px solid #00000050;
+    padding: 10px;
+    font-size: 15px;
+}
+.send{
+    align-self: flex-end;
+    padding: 12px 25px;
+    margin: 10px;
+    color: white;
+    background-color: black;
+    border: none;
+}
+.contact i{
+    display: inline-block;
+    color: gray;
+    margin:25px 0;
+}
+#footer{
+    height: 300px;
+    color: gray;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#footer div:nth-child(2){
+    margin: 15px;
+}
+#footer i:hover{
+    opacity: .6;
+}
+#footer a{
+    color: gray;
+}
+.dialog-box{
+    position: fixed;
+    top:10%;left: 50%;
+    transform: translateX(-50%) ;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 500px;
+    width: 95%;
+    height: 400px;
+    box-shadow: 0 0 10px black;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: show 0.5s ;
+    display: none;
+}
+@keyframes show{
+    from{
+        top:-100%;
+    }to{
+        top:10%;
+    }
+}
+.dialog-box i{
+   
+    padding:0 5px;
+    transform: translateY(1px);
+}
+.dialog-box .header{
+    height: 100px;
+    background-color: #009688;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.dialog-box .content{
+    padding: 15px;
+}
+.dialog-box .content input{
+    margin:15px 0;
+    height: 35px;
+    padding: 10px;
+    font-size: 15px;
+    border:1px solid #ccc;
+}
+.pay{
+    width: 100%;
+    background-color: #009688;
+    border:none;
+    padding:15px ;
+    color:white;
+    font-size: 18px;
+}
+.close{
+    background-color:#f44336;
+    border: none;
+    padding:10px 15px;
+    color: white;
+}
+.dialog-box .footer{
+    display: flex;
+    justify-content: space-between;
+    margin:20px 0 0;
+    font-size: 16px;
+}
+button{
+    cursor: pointer;
+}
+.dialog-box .footer a{
+    color: cornflowerblue;
+}
+.dialog-box .header i:nth-child(1){
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px){
+    .tourdates .tourlist{
+        flex-direction: column;
+    }
+    .tourlist .item{
+        width: 100% !important;
+    }
+    .theband .theband-footer{
+        flex-direction: column;
+    }
+    .contact .send-box{
+        flex-direction: column;
+    }
+    .input-box >div{
+        flex-direction: column;
+    }
+    .input-box >div input{
+        width: auto !important;
+    } 
+    #header li{
+        display: block;
+    }
+    #header li a{
+        display: block;
+    }
+    #header >ul> li:nth-child(1){
+        display: inline-block;
+    }
+    #header >ul> li:nth-child(2){
+        display: inline-block;float: right;
+    }
+   #header{
+       height: 46px;overflow: hidden;
+   }
+   .subnav{
+       width: 100% !important;
+        position: unset !important;
+   }
+}
